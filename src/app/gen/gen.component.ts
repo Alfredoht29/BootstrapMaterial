@@ -18,7 +18,6 @@ export class GenComponent implements OnInit {
   ngOnInit(): void {
     this.realquery=JSON.parse(JSON.stringify(this.queryinfo));
     this.realquery["status"]="generado";
-    console.log(this.realquery)
   }
   
   ngAfterViewInit() {

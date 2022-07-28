@@ -62,7 +62,6 @@ export class NongenComponent implements OnInit {
   ngOnInit(): void {
   this.realquery=JSON.parse(JSON.stringify(this.queryinfo));
   this.realquery["status"]="no generado";
-  console.log(this.realquery)
   }
 
 }

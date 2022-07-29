@@ -15,6 +15,9 @@ import { GenComponent } from './gen/gen.component';
 import { SelectionModel} from '@angular/cdk/collections';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { DetailsComponent } from './details/details.component';
+import { PendingComponent } from './pending/pending.component';
+import { PrecanceledComponent } from './precanceled/precanceled.component';
+import { CancelledComponent } from './cancelled/cancelled.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { DetailsComponent } from './details/details.component';
     SecondtableComponent,
     NongenComponent,
     GenComponent,
-    DetailsComponent
+    DetailsComponent,
+    PendingComponent,
+    PrecanceledComponent,
+    CancelledComponent
   ],
   imports: [
     BrowserModule,

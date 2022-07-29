@@ -14,6 +14,7 @@ import { NongenComponent } from './nongen/nongen.component';
 import { GenComponent } from './gen/gen.component';
 import { SelectionModel} from '@angular/cdk/collections';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     TablemComponent,
     SecondtableComponent,
     NongenComponent,
-    GenComponent
+    GenComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

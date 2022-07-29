@@ -11,6 +11,7 @@ export class CancelledComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'detalles'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  title="Cancelados";
   constructor() { }
 
   ngOnInit(): void {

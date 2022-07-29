@@ -11,6 +11,7 @@ export class PrecanceledComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'detalles'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  title="Precancelados"
   constructor() { }
 
   ngOnInit(): void {

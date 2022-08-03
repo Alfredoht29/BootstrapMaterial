@@ -8,6 +8,7 @@ import { SecondtableComponent } from './secondtable/secondtable.component';
 import { TablemComponent } from './tablem/tablem.component';
 
 const routes: Routes = [{path:'tablem',component:TablemComponent},
+{path:'',redirectTo:'tablem',pathMatch:'full'},
 {path:'tablem/:id',component:SecondtableComponent},
 {path:'details',component:DetailsComponent},
 {path:'cancelled',component:CancelledComponent},

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrecanceledComponent } from './precanceled.component';
+import { PrecanceledComponent } from './sustitution.component';
 
 describe('PrecanceledComponent', () => {
   let component: PrecanceledComponent;

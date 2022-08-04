@@ -11,7 +11,7 @@ export class PendingComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'detalles'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  title="Pendientes";
+  title="Precanceladas";
   constructor() { }
 
   ngOnInit(): void {

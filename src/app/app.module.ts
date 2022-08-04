@@ -16,7 +16,7 @@ import { SelectionModel} from '@angular/cdk/collections';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { DetailsComponent } from './details/details.component';
 import { PendingComponent } from './pending/pending.component';
-import { PrecanceledComponent } from './precanceled/precanceled.component';
+import { SustitutionComponent } from './sustitution/sustitution.component';
 import { CancelledComponent } from './cancelled/cancelled.component';
 
 @NgModule({
@@ -28,7 +28,7 @@ import { CancelledComponent } from './cancelled/cancelled.component';
     GenComponent,
     DetailsComponent,
     PendingComponent,
-    PrecanceledComponent,
+    SustitutionComponent,
     CancelledComponent
   ],
   imports: [

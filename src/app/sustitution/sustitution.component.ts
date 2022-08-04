@@ -3,15 +3,15 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: 'app-precanceled',
+  selector: 'app-sustitution',
   templateUrl:'../pending/pending.component.html',
-  styleUrls: ['./precanceled.component.css']
+  styleUrls: ['./sustitution.component.css']
 })
-export class PrecanceledComponent implements OnInit {
+export class SustitutionComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'detalles'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  title="Precancelados"
+  title="Sustitucion"
   constructor() { }
 
   ngOnInit(): void {

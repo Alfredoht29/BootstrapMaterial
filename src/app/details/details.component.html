@@ -1,43 +1,48 @@
 <br>
 <br>
 <div class="container border rounded">
-    <form class="row g-3 p-5">
-        <div class="col-md-6">
-          <label class="form-label">Nombre</label>
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">Matricula</label>
-          <input type="password" class="form-control">
-        </div>
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Tipo de nomina</label>
-        <select class="form-select">
-            <option selected>Deducciones de nomina</option>
-        </select>
-        </div>
-        <div class="col-12">
-          <label for="inputAddress2" class="form-label">Periodo</label>
-          <input type="text" class="form-control" placeholder="2022-05-24">
-        </div>
-        <div class="col-md-4">
-            <label for="inputCity" class="form-label">Deducciones</label>
-            <input type="text" class="form-control" >
-          </div>
-        <div class="col-md-4">
-          <label for="inputCity" class="form-label">Percepciones</label>
-          <input type="text" class="form-control" >
-        </div>
-        <div class="col-md-4">
-          <label for="inputState" class="form-label">Empresa</label>
-          <select class="form-select">
-            <option selected>Cice</option>
-            <option>OPAI</option>
-          </select>
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Importe</label>
-            <input type="password" class="form-control">
-          </div>
-      </form>
+  <form class="row g-3 p-5">
+    <div class="col-md-6">
+      <label class="form-label">Nombre</label>
+      <input type="text" class="form-control" placeholder="Ernesto Alvarez">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Matricula</label>
+      <input type="password" class="form-control" placeholder="25653121" disabled>
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Tipo de nomina</label>
+      <input type="text" class="form-control" value="Deducciones de nomina" disabled>
+    </div>
+    <div class="col-12">
+      <label for="inputAddress2" class="form-label">Periodo</label>
+      <input type="text" class="form-control" value="194081" disabled>
+    </div>
+    <div class="col-md-4">
+      <label for="inputCity" class="form-label">Deducciones</label>
+      <ul class="list-group">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <label for="inputCity" class="form-label">Percepciones</label>
+      <ul class="list-group">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Empresa</label>
+      <input type="text" class="form-control" value="CICE" disabled>
+      <label class="form-label" style="margin-top:10px;">Importe Total</label>
+      <input type="text" class="form-control">
+    </div>
+  </form>
 </div>

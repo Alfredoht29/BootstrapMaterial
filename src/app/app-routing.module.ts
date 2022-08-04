@@ -7,13 +7,13 @@ import { SustitutionComponent } from './sustitution/sustitution.component';
 import { SecondtableComponent } from './secondtable/secondtable.component';
 import { TablemComponent } from './tablem/tablem.component';
 
-const routes: Routes = [{path:'tablem',component:TablemComponent},
-{path:'',redirectTo:'tablem',pathMatch:'full'},
-{path:'tablem/:id',component:SecondtableComponent},
-{path:'details',component:DetailsComponent},
-{path:'cancelled',component:CancelledComponent},
-{path:'pending',component:PendingComponent},
-{path:'sustitution',component:SustitutionComponent}];
+const routes: Routes = [{ path: 'tablem', component: TablemComponent },
+{ path: '', redirectTo: 'tablem', pathMatch: 'full' },
+{ path: 'tablem/:id', component: SecondtableComponent },
+{ path: 'details', component: DetailsComponent },
+{ path: 'cancelled', component: CancelledComponent },
+{ path: 'pending', component: PendingComponent },
+{ path: 'sustitution', component: SustitutionComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

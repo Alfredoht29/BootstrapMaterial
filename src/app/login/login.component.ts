@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../models/user.model';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -22,14 +23,8 @@ export class LoginComponent implements OnInit {
     console.log(this.user);
     const user2=this.user
   }
-  ingresar(un:string,up:string){
-    if(un==this.user?.username && up==this.user?.password){
-      this.route.navigate(['tablem']);
-    }
-    else{
-      console.log("error");
-      
-    }
+  ingresar(log:NgForm){
+    console.log(log.value);
   }
 
 }

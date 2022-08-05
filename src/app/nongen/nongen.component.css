@@ -1,7 +1,18 @@
 th.mat-header-cell {
-    text-align: center !important;
-  }
- ::ng-deep .xx {
-    background: #b71c1c !important;
-  }
-  
+  text-align: center !important;
+  background: azure;
+  color: black;
+}
+
+.mat-cell {
+  background: azure;
+  color: black;
+}
+
+::ng-deep .xx {
+  background: #b71c1c !important;
+}
+
+::ng-deep .mat-checkbox-frame {
+  border-color: black;
+}

@@ -18,6 +18,9 @@ import { DetailsComponent } from './details/details.component';
 import { PendingComponent } from './pending/pending.component';
 import { SustitutionComponent } from './sustitution/sustitution.component';
 import { CancelledComponent } from './cancelled/cancelled.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { CancelledComponent } from './cancelled/cancelled.component';
     DetailsComponent,
     PendingComponent,
     SustitutionComponent,
-    CancelledComponent
+    CancelledComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,9 @@ import { CancelledComponent } from './cancelled/cancelled.component';
     MatTableModule,
     MatSelectModule,
     MatTabsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

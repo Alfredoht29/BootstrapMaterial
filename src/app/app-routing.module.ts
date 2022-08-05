@@ -6,9 +6,11 @@ import { PendingComponent } from './pending/pending.component';
 import { SustitutionComponent } from './sustitution/sustitution.component';
 import { SecondtableComponent } from './secondtable/secondtable.component';
 import { TablemComponent } from './tablem/tablem.component';
+import { LoginComponent } from './login/login.component';
 
-const routes: Routes = [{ path: 'tablem', component: TablemComponent },
-{ path: '', redirectTo: 'tablem', pathMatch: 'full' },
+const routes: Routes = [{path:'login',component:LoginComponent},
+{ path: 'tablem', component: TablemComponent },
+{ path: '', redirectTo: 'login', pathMatch: 'full' },
 { path: 'tablem/:id', component: SecondtableComponent },
 { path: 'details', component: DetailsComponent },
 { path: 'cancelled', component: CancelledComponent },

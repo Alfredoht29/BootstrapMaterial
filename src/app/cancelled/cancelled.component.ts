@@ -4,14 +4,13 @@ import { MatTableDataSource } from '@angular/material/table';
 import { PendingComponent } from '../pending/pending.component';
 @Component({
   selector: 'app-cancelled',
-  templateUrl:'../pending/pending.component.html',
+  templateUrl:'cancelled.component.html',
   styleUrls: ['./cancelled.component.css']
 })
 export class CancelledComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'detalles'];
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  title="Cancelados";
   constructor() { }
 
   ngOnInit(): void {

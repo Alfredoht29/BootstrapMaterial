@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  xx={x:"xd"}
+  xx={x:1}
 
   constructor() { }
 

@@ -12,7 +12,7 @@ const routes: Routes = [{path:'login',component:LoginComponent},
 { path: 'tablem', component: TablemComponent },
 { path: '', redirectTo: 'login', pathMatch: 'full' },
 { path: 'tablem/:id', component: SecondtableComponent },
-{ path: 'details', component: DetailsComponent },
+{ path: 'tablem/:id/details', component: DetailsComponent },
 { path: 'cancelled', component: CancelledComponent },
 { path: 'pending', component: PendingComponent },
 { path: 'sustitution', component: SustitutionComponent }];

@@ -39,7 +39,7 @@ export class TablemComponent implements AfterViewInit {
   }
 
   detalle(x1: Number, x2: string, x3: string, x4: string) {
-    this.route.navigate(['tablem', 1], { queryParams: { no: x1, name: x2, weight: x3, symbol: x4 } })
+    this.route.navigate(['tablem', x1], { queryParams: { no: x1, name: x2, weight: x3, symbol: x4 } })
   }
 }
 

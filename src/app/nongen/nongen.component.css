@@ -5,7 +5,3 @@ th.mat-header-cell {
 ::ng-deep .xx {
   background: #b71c1c !important;
 }
-
-::ng-deep .mat-checkbox-frame {
-  border-color: black;
-}

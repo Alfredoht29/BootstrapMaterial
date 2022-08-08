@@ -1,12 +1,5 @@
 th.mat-header-cell {
   text-align: center !important;
-  background: azure;
-  color: black;
-}
-
-.mat-cell {
-  background: azure;
-  color: black;
 }
 
 ::ng-deep .xx {

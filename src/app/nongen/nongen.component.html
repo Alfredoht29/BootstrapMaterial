@@ -17,41 +17,25 @@
   <!-- Position Column -->
   <ng-container matColumnDef="position">
     <th mat-header-cell *matHeaderCellDef> No. </th>
-    <td mat-cell *matCellDef="let element" #tooltip="matTooltip"
-    matTooltip="position"
-    [matTooltipPosition]="'above'"
-    matTooltipHideDelay="100"
-    matTooltipClass="xx"> {{element.position}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
   </ng-container>
 
   <!-- Name Column -->
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef> Name </th>
-    <td mat-cell *matCellDef="let element" #tooltip="matTooltip"
-    matTooltip="name"
-    [matTooltipPosition]="'above'"
-    matTooltipHideDelay="100"
-    matTooltipClass="xx"> {{element.name}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
   </ng-container>
 
   <!-- Weight Column -->
   <ng-container matColumnDef="weight">
     <th mat-header-cell *matHeaderCellDef> Weight </th>
-    <td mat-cell *matCellDef="let element" #tooltip="matTooltip"
-    matTooltip="weight"
-    [matTooltipPosition]="'above'"
-    matTooltipHideDelay="100"
-    matTooltipClass="xx"> {{element.weight}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
   </ng-container>
 
   <!-- Symbol Column -->
   <ng-container matColumnDef="symbol">
     <th mat-header-cell *matHeaderCellDef> Symbol </th>
-    <td mat-cell *matCellDef="let element" #tooltip="matTooltip"
-    matTooltip="symbol"
-    [matTooltipPosition]="'above'"
-    matTooltipHideDelay="100"
-    matTooltipClass="xx"> {{element.symbol}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

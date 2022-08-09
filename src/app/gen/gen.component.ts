@@ -5,7 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 @Component({
   selector: 'app-gen',
   templateUrl: './gen.component.html',
-  styleUrls: ['./gen.component.css']
+  styleUrls: ['../pending/pending.component.css']
 })
 export class GenComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'detalles'];

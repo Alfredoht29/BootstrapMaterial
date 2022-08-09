@@ -20,7 +20,6 @@ export class SecondtableComponent implements OnInit {
       this.title=params['name'];
       this.x=params['symbol'];
     })
-    this.queryinfop = this.tabledet
   }
 
 }

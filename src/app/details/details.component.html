@@ -4,19 +4,55 @@
   <div class="row g-3 p-5">
     <div class="col-md-6">
       <label class="form-label">Nombre</label>
-      <input type="text" class="form-control" placeholder="Ernesto Alvarez">
+      <input type="text" class="form-control" value="">
     </div>
     <div class="col-md-6">
       <label class="form-label">Matricula</label>
-      <input type="password" class="form-control" placeholder="25653121" disabled>
+      <input type="password" class="form-control" placeholder="" disabled>
     </div>
-    <div class="col-12">
+    <div class="col-6">
       <label for="inputAddress" class="form-label">Tipo de nomina</label>
-      <input type="text" class="form-control" value="Deducciones de nomina" disabled>
+      <input type="text" class="form-control" value="" disabled>
     </div>
-    <div class="col-12">
+    <div class="col-md-6">
+      <label class="form-label">Importe Total</label>
+      <input type="text" class="form-control" value="" readonly>
+    </div>
+    <div class="col-md-4">
+      <label for="inputAddress2" class="form-label">Curp</label>
+      <input type="text" class="form-control" value="" disabled>
+    </div>
+    <div class="col-md-4">
+      <label for="inputAddress2" class="form-label">RFC</label>
+      <input type="text" class="form-control" value="">
+    </div>
+    <div class="col-md-4">
+      <label for="inputAddress2" class="form-label">Codigo Postal</label>
+      <input type="text" class="form-control" value="" disabled>
+    </div>
+    <div class="col-md-4">
+      <label for="inputAddress2" class="form-label">Fecha de pago</label>
+      <input type="text" class="form-control" value="" disabled>
+    </div>
+    <div class="col-md-4">
+      <label for="inputAddress2" class="form-label">Fecha Inicial de pago</label>
+      <input type="text" class="form-control" value="" disabled>
+    </div>
+    <div class="col-md-4">
+      <label for="inputAddress2" class="form-label">Fecha Inicial de pago</label>
+      <input type="text" class="form-control" value="" disabled>
+    </div>
+    <div class="col-md-4">
+      <label for="inputAddress2" class="form-label">Dias Pagados</label>
+      <input type="text" class="form-control" value="" disabled>
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Empresa</label>
+      <input type="text" class="form-control" value="" disabled>
+    </div>
+    <div class="col-md-4">
       <label for="inputAddress2" class="form-label">Periodo</label>
-      <input type="text" class="form-control" value="194081" disabled>
+      <input type="text" class="form-control" value="" disabled>
     </div>
     <div class="col-md-4">
       <label for="inputCity" class="form-label">Deducciones</label>
@@ -49,12 +85,44 @@
       </ul>
     </div>
     <div class="col-md-4">
-      <label for="inputState" class="form-label">Empresa</label>
-      <input type="text" class="form-control" value="CICE" disabled>
+      <label for="inputCity" class="form-label">Otros pagos causados</label>
+      <ul class="list-group">
+        <li class="list-group-item" *ngIf="xx.x!=null">{{xx.x}}</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
     </div>
     <div class="col-md-4">
-      <label class="form-label">Importe Total</label>
-      <input type="text" class="form-control">
+      <label for="inputCity" class="form-label">Saldo a favor</label>
+      <ul class="list-group">
+        <li class="list-group-item" *ngIf="xx.x!=null">{{xx.x}}</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <label for="inputCity" class="form-label">Incapacidad</label>
+      <ul class="list-group">
+        <li class="list-group-item" *ngIf="xx.x!=null">{{xx.x}}</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <label for="inputCity" class="form-label">Horas extra</label>
+      <ul class="list-group">
+        <li class="list-group-item" *ngIf="xx.x!=null">{{xx.x}}</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
     </div>
   </div>
 </div>

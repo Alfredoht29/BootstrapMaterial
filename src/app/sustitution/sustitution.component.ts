@@ -5,7 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 @Component({
   selector: 'app-sustitution',
   templateUrl:'../pending/pending.component.html',
-  styleUrls: ['./sustitution.component.css']
+  styleUrls: ['../pending/pending.component.css']
 })
 export class SustitutionComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'detalles'];

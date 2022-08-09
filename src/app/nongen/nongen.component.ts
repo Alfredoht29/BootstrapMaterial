@@ -35,7 +35,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-nongen',
   templateUrl: './nongen.component.html',
-  styleUrls: ['./nongen.component.css']
+  styleUrls: ['../pending/pending.component.css']
 })
 export class NongenComponent implements OnInit {
   displayedColumns: string[] = ['select', 'position', 'name', 'weight', 'symbol'];

@@ -16,6 +16,9 @@ export class PendingComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  x(){
+    console.log("x")
+  }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;

@@ -13,6 +13,10 @@ export class CancelledComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   constructor() { }
 
+  x(){
+    console.log("x")
+  }
+
   ngOnInit(): void {
   }
 

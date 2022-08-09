@@ -16,6 +16,9 @@ export class SustitutionComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  x(){
+    console.log("x")
+  }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;

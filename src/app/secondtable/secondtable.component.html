@@ -1,10 +1,16 @@
-<h2>{{title}}</h2>
+<h2>{{title}} {{x}}</h2>
 <br>
-<mat-tab-group  id="stick" style="width: 90%;margin-left:5%;padding: 1%;">
-    <mat-tab label="No generadas"><app-nongen [queryinfo]="queryinfop"></app-nongen></mat-tab>
-    <mat-tab label="Generadas"><app-gen [queryinfo]="queryinfop"></app-gen></mat-tab>
-    <mat-tab label="Error"><app-nongen [queryinfo]="queryinfop"></app-nongen></mat-tab>
-    <mat-tab label="Precanceladas"><app-pending></app-pending></mat-tab>
-    <mat-tab label="Sustitucion"><app-sustitution></app-sustitution></mat-tab>
-</mat-tab-group>
-<div style="padding: 30px ;"></div>
+<div style="width:80%;margin-left:10%">
+    <div *ngIf="x=='gen'">
+        <app-gen></app-gen>
+    </div>
+    <div *ngIf="x=='nongen'">
+        <app-nongen></app-nongen>
+    </div>
+    <div *ngIf="x=='pending'">
+        <app-pending></app-pending>
+    </div>
+    <div *ngIf="x=='sustitution'">
+        <app-sustitution></app-sustitution>
+    </div>
+    <div style="padding: 30px ;"></div>

@@ -11,12 +11,14 @@ export class SecondtableComponent implements OnInit {
   tabledet:any;
   title:string|undefined
   queryinfop:any;
+  x=""
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe((params:Params)=>{
       this.tabledet=params;
-      this.title=params['name']
+      this.title=params['name'];
+      this.x=params['symbol'];
     })
     this.queryinfop = this.tabledet
   }

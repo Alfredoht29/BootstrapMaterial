@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrecanceledComponent } from './sustitution.component';
+import { SustitutionComponent } from './sustitution.component';
 
-describe('PrecanceledComponent', () => {
-  let component: PrecanceledComponent;
-  let fixture: ComponentFixture<PrecanceledComponent>;
+describe('SustitutionComponent', () => {
+  let component: SustitutionComponent;
+  let fixture: ComponentFixture<SustitutionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PrecanceledComponent ]
+      declarations: [ SustitutionComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PrecanceledComponent);
+    fixture = TestBed.createComponent(SustitutionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

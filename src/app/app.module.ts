@@ -20,7 +20,6 @@ import { SustitutionComponent } from './sustitution/sustitution.component';
 import { CancelledComponent } from './cancelled/cancelled.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -34,7 +33,6 @@ import { FormsModule } from '@angular/forms';
     PendingComponent,
     SustitutionComponent,
     CancelledComponent,
-    LoginComponent,
   ],
   imports: [
     BrowserModule,

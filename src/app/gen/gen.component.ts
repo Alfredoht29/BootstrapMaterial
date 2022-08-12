@@ -8,7 +8,7 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['../pending/pending.component.css']
 })
 export class GenComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'detalles'];
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','x', 'detalles'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   constructor() { }

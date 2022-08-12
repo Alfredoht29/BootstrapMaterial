@@ -1,16 +1,19 @@
 <h2>{{title}} {{x}}</h2>
 <br>
 <div style="width:80%;margin-left:10%">
-    <div *ngIf="x=='gen'">
+    <div *ngIf="x=='Generadas'">
         <app-gen></app-gen>
     </div>
-    <div *ngIf="x=='nongen'">
+    <div *ngIf="x=='No Generadas'">
         <app-nongen></app-nongen>
     </div>
-    <div *ngIf="x=='pending'">
+    <div *ngIf="x=='Precanceladas'">
         <app-pending></app-pending>
     </div>
-    <div *ngIf="x=='sustitution'">
+    <div *ngIf="x=='Error'">
+        <app-sustitution></app-sustitution>
+    </div>
+    <div *ngIf="x=='Sustitucion'">
         <app-sustitution></app-sustitution>
     </div>
     <div style="padding: 30px ;"></div>

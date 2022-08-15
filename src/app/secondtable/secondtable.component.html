@@ -2,18 +2,26 @@
 <br>
 <div style="width:80%;margin-left:10%">
     <div *ngIf="x=='Generado'">
-        <app-gen></app-gen>
+        <mat-tab-group>
+            <mat-tab label="Generadas">
+                <app-gen></app-gen>
+            </mat-tab>
+            <mat-tab label="En Sustitucion">
+                <app-sustitution></app-sustitution>
+            </mat-tab>
+        </mat-tab-group>
     </div>
     <div *ngIf="x=='No Generado'">
-        <app-nongen></app-nongen>
-    </div>
-    <div *ngIf="x=='Precanceladas'">
-        <app-pending></app-pending>
+        <mat-tab-group>
+            <mat-tab label="No generadas">
+                <app-nongen></app-nongen>
+            </mat-tab>
+            <mat-tab label="Precanceladas">
+                <app-pending></app-pending>
+            </mat-tab>
+        </mat-tab-group>
     </div>
     <div *ngIf="x=='Error'">
         <app-error></app-error>
     </div>
-    <div *ngIf="x=='Sustitucion'">
-        <app-sustitution></app-sustitution>
-    </div>
-    <div style="padding: 30px ;"></div>
+<div style="padding: 30px ;"></div>

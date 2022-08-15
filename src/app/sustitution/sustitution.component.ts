@@ -4,7 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-sustitution',
-  templateUrl:'../pending/pending.component.html',
+  templateUrl:'sustitution.component.html',
   styleUrls: ['../pending/pending.component.css']
 })
 export class SustitutionComponent implements OnInit {

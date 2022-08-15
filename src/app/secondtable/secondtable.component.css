@@ -1,11 +1,14 @@
 :host ::ng-deep .mat-tab-header{
-    top: 0;
-    z-index: 1000; 
-    position: sticky;
-    position: -webkit-sticky;
     background-color: #292b2c;
+}
+:host ::ng-deep th.mat-header-cell {
+    position: -webkit-sticky!important;
+    position: sticky!important;
 }
 h2{
     margin-top: 25px;
     margin-left: 25px;
+}
+.cont{
+    width:80%;margin-left:10%;
 }

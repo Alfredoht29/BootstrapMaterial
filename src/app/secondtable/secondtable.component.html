@@ -1,8 +1,8 @@
 <h2>{{title}} {{x}}</h2>
 <br>
-<div style="width:80%;margin-left:10%">
+<div class="cont">
     <div *ngIf="x=='Generado'">
-        <mat-tab-group>
+        <mat-tab-group style="height: 100vh">
             <mat-tab label="Generadas">
                 <app-gen></app-gen>
             </mat-tab>
@@ -12,7 +12,7 @@
         </mat-tab-group>
     </div>
     <div *ngIf="x=='No Generado'">
-        <mat-tab-group>
+        <mat-tab-group style="height: 100vh">
             <mat-tab label="No generadas">
                 <app-nongen></app-nongen>
             </mat-tab>
@@ -24,4 +24,3 @@
     <div *ngIf="x=='Error'">
         <app-error></app-error>
     </div>
-<div style="padding: 30px ;"></div>

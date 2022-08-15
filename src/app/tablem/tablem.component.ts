@@ -4,15 +4,16 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-tablem',
   templateUrl: './tablem.component.html',
-  styleUrls: ['./tablem.component.css']
+  styleUrls: ['./tablem.component.css'],
 })
 export class TablemComponent implements AfterViewInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'detalles'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  displayedColumns: string[] = ['cantidad', 'estado', 'periodo', 'company', 'tipo','elemento','detalles'];
+  dataSource = new MatTableDataSource<Resumen>(ELEMENT_DATA);
   selectedDate: string | undefined;
   det: any[] = [];
   subscription: Subscription = new Subscription;
@@ -39,38 +40,180 @@ export class TablemComponent implements AfterViewInit {
   }
 
   detalle(x1: Number, x2: string, x3: string, x4: string) {
-    this.route.navigate(['tablem', x1], { queryParams: { no: x1, name: x2, weight: x3, symbol: x4 } })
+    this.route.navigate(['tablem', x4], { queryParams: { cantidad: x1, estado: x2, periodo: x3, company: x4 } })
   }
 }
 
 
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+export interface Resumen {
+  cantidad:number,
+  estado:string,
+  periodo:string,
+  company:string,
+  tipo:string,
+  elemento:string
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'Generadas' },
-  { position: 2, name: 'Helium', weight: 4.0026, symbol: 'No Generadas' },
-  { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Precanceladas' },
-  { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Error' },
-  { position: 5, name: 'Boron', weight: 10.811, symbol: 'Sustitucion' },
-  { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-  { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-  { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-  { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-  { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-  { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
-  { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
-  { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
-  { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
-  { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
-  { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
-  { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
-  { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
-  { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
-  { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+const ELEMENT_DATA: Resumen[] = [
+    {
+      "cantidad": 94,
+      "estado": "Generado",
+      "periodo": "2019-04-20 ",
+      "company": "IMAGINART",
+      "tipo": "Nomina Extraordinaria",
+      "elemento": "Nomina Finiquitos"
+    },
+    {
+      "cantidad": 36,
+      "estado": "Generado",
+      "periodo": "2020-01-18 ",
+      "company": "COMBOGEN",
+      "tipo": "Nomina Extraordinaria",
+      "elemento": "Nomina Ordinaria"
+    },
+    {
+      "cantidad": 71,
+      "estado": "Error",
+      "periodo": "2016-03-21 ",
+      "company": "STEELTAB",
+      "tipo": "Deducciones de nomina",
+      "elemento": "Nomina PTU"
+    },
+    {
+      "cantidad": 27,
+      "estado": "Generado",
+      "periodo": "2018-08-23 ",
+      "company": "ORBEAN",
+      "tipo": "Nomina Extraordinaria",
+      "elemento": "Nomina Finiquitos"
+    },
+    {
+      "cantidad": 82,
+      "estado": "No Generado",
+      "periodo": "2016-05-13 ",
+      "company": "YOGASM",
+      "tipo": "Deducciones de nomina",
+      "elemento": "Nomina Finiquitos"
+    },
+    {
+      "cantidad": 21,
+      "estado": "Error",
+      "periodo": "2019-09-06 ",
+      "company": "EMPIRICA",
+      "tipo": "Deducciones de nomina",
+      "elemento": "Nomina Finiquitos"
+    },
+    {
+      "cantidad": 55,
+      "estado": "Error",
+      "periodo": "2017-12-11 ",
+      "company": "HATOLOGY",
+      "tipo": "Deducciones de nomina",
+      "elemento": "Nomina Finiquitos"
+    },
+    {
+      "cantidad": 89,
+      "estado": "No Generado",
+      "periodo": "2019-05-02 ",
+      "company": "BLUEGRAIN",
+      "tipo": "Deducciones de nomina",
+      "elemento": "Nomina Ordinaria"
+    },
+    {
+      "cantidad": 53,
+      "estado": "No Generado",
+      "periodo": "2018-12-14 ",
+      "company": "ZILLATIDE",
+      "tipo": "Nomina Extraordinaria",
+      "elemento": "Nomina PTU"
+    },
+    {
+      "cantidad": 81,
+      "estado": "Error",
+      "periodo": "2018-08-09 ",
+      "company": "FUELTON",
+      "tipo": "Nomina Extraordinaria",
+      "elemento": "Nomina Ordinaria"
+    },
+    {
+      "cantidad": 53,
+      "estado": "Error",
+      "periodo": "2022-01-28 ",
+      "company": "GEEKOLOGY",
+      "tipo": "Nomina Extraordinaria",
+      "elemento": "Nomina Ordinaria"
+    },
+    {
+      "cantidad": 25,
+      "estado": "Error",
+      "periodo": "2020-05-27 ",
+      "company": "QUONK",
+      "tipo": "Nomina Extraordinaria",
+      "elemento": "Nomina Ordinaria"
+    },
+    {
+      "cantidad": 93,
+      "estado": "Generado",
+      "periodo": "2019-02-26 ",
+      "company": "ECOSYS",
+      "tipo": "Nomina Extraordinaria",
+      "elemento": "Nomina Finiquitos"
+    },
+    {
+      "cantidad": 34,
+      "estado": "Generado",
+      "periodo": "2020-05-22 ",
+      "company": "AUSTEX",
+      "tipo": "Deducciones de nomina",
+      "elemento": "Nomina Ordinaria"
+    },
+    {
+      "cantidad": 24,
+      "estado": "Error",
+      "periodo": "2021-12-29 ",
+      "company": "TROPOLI",
+      "tipo": "Nomina Extraordinaria",
+      "elemento": "Nomina Ordinaria"
+    },
+    {
+      "cantidad": 73,
+      "estado": "No Generado",
+      "periodo": "2014-02-09 ",
+      "company": "ANDRYX",
+      "tipo": "Nomina Extraordinaria",
+      "elemento": "Nomina Finiquitos"
+    },
+    {
+      "cantidad": 97,
+      "estado": "Error",
+      "periodo": "2020-04-09 ",
+      "company": "DRAGBOT",
+      "tipo": "Deducciones de nomina",
+      "elemento": "Nomina PTU"
+    },
+    {
+      "cantidad": 22,
+      "estado": "Generado",
+      "periodo": "2021-01-10 ",
+      "company": "PROSURE",
+      "tipo": "Nomina Extraordinaria",
+      "elemento": "Nomina Finiquitos"
+    },
+    {
+      "cantidad": 84,
+      "estado": "Generado",
+      "periodo": "2017-07-13 ",
+      "company": "ADORNICA",
+      "tipo": "Nomina Extraordinaria",
+      "elemento": "Nomina Finiquitos"
+    },
+    {
+      "cantidad": 86,
+      "estado": "Error",
+      "periodo": "2020-10-15 ",
+      "company": "KONGENE",
+      "tipo": "Nomina Extraordinaria",
+      "elemento": "Nomina Finiquitos"
+    }
 ];

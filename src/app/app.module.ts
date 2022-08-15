@@ -20,6 +20,8 @@ import { CancelledComponent } from './cancelled/cancelled.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { FormsModule } from '@angular/forms';
+import { MatSortModule } from '@angular/material/sort';
+import { ErrorComponent } from './error/error.component';
 
 
 
@@ -34,6 +36,7 @@ import { FormsModule } from '@angular/forms';
     PendingComponent,
     SustitutionComponent,
     CancelledComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +49,7 @@ import { FormsModule } from '@angular/forms';
     MatCheckboxModule,
     MatToolbarModule,
     MatTooltipModule,
+    MatSortModule,
     FormsModule,
     BrowserModule,
     BrowserAnimationsModule

@@ -1,22 +1,21 @@
-import { Component, Input, OnInit,AfterViewInit,ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: 'app-gen',
-  templateUrl: './gen.component.html',
+  selector: 'app-error',
+  templateUrl: './error.component.html',
   styleUrls: ['../pending/pending.component.css']
 })
-export class GenComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','x','x2','x3','x4','x5', 'detalles'];
+export class ErrorComponent implements OnInit {
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','x','x2','x3','detalles'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   constructor() { }
 
   ngOnInit(): void {
-    
   }
-  
+    
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
@@ -52,4 +51,3 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
   { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
-

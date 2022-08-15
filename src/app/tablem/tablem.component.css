@@ -1,10 +1,11 @@
 th.mat-header-cell {
-  text-align: center !important;
   background-color: rgb(232, 122, 19);
   font-weight: bold;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: ghostwhite;
   font-size: 1rem;
+  text-align: center;
+  padding: 25px;
 }
 
 h2 {

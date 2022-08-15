@@ -4,7 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-tablem',
@@ -27,11 +27,12 @@ export class TablemComponent implements AfterViewInit {
   nominas = [{ nom: "APOYO TRANSPORTE ASCOP" }, { nom: "APOYO TRANSPORTE FISA" }, { nom: "LISTADO QUINCENAL BECA DE PRACTICANTES" }]
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   nomina: {} | undefined;
-
+  @ViewChild(MatSort) sort!: MatSort;
   constructor( private route: Router) { }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
   SearchAbstract(n: string, di: string, df: string, tn: string) {

@@ -38,7 +38,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['../pending/pending.component.css']
 })
 export class NongenComponent implements OnInit {
-  displayedColumns: string[] = ['select', 'position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['select', 'position', 'name', 'weight', 'symbol','x','rfc','total'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
   @ViewChild(MatPaginator) paginator!: MatPaginator;

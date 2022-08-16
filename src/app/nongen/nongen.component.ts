@@ -2,6 +2,7 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { __values } from 'tslib';
 
 export interface PeriodicElement {
   name: string;
@@ -42,6 +43,10 @@ export class NongenComponent implements OnInit {
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  arr:any;
+  x:any;
+  @Input() nongenHerencia:string | undefined;
+  @Input() compañia:string | undefined;
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
@@ -53,7 +58,6 @@ export class NongenComponent implements OnInit {
     return numSelected === numRows;
   }
 
-  /** Selects all rows if they are not all selected; otherwise clear selection. */
   toggleAllRows() {
     if (this.isAllSelected()) {
       this.selection.clear();
@@ -63,7 +67,6 @@ export class NongenComponent implements OnInit {
     this.selection.select(...this.dataSource.data);
   }
 
-  /** The label for the checkbox on the passed row */
   checkboxLabel(row?: PeriodicElement): string {
     if (!row) {
       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
@@ -73,6 +76,18 @@ export class NongenComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  cancelar(){
+    let p=this.nongenHerencia;
+    let c=this.compañia;
+    this.arr=(this.selection.selected);
+    this.x=this.arr.map(function(item:{ position: any; name: any; weight: any; }){return{"position":item.position,"name":item.name,"weight":item.weight,"periodo":p,"compañia":c}})
+    console.log(this.x);
   }
 
 }

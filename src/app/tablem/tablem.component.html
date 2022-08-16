@@ -34,31 +34,37 @@
                     </option>
                 </select>
             </div>
-        <div class="col">
-            <br>
-            <button (click)="SearchAbstract(nomin.value,datei.value,datef.value,tnomina.value)"
-                class="btn btn-primary" style="margin-top: 8px;">buscar</button>
-        </div>
+            <div class="col">
+                <br>
+                <button (click)="SearchAbstract(nomin.value,datei.value,datef.value,tnomina.value)"
+                    class="btn btn-primary" style="margin-top: 8px;">buscar</button>
+            </div>
         </div>
     </div>
-    <div class="mat-elevation-z8" style="text-align: center;">
-        <table mat-table [dataSource]="dataSource" style="width: 100%;" matSort >
-            <!-- Position Column -->
+    <div class="bg-dark text-light">
+        <mat-form-field appearance="fill">
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder=" Ex. Matricula" #input>
+        </mat-form-field>
+    </div>
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" style="width: 100%;text-align: center;" matSort>
+
             <ng-container matColumnDef="cantidad">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Cantidad </th>
                 <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
             </ng-container>
-            <!-- Name Column -->
+
             <ng-container matColumnDef="estado">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
                 <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
             </ng-container>
-            <!-- Weight Column -->
+
             <ng-container matColumnDef="periodo">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Periodo </th>
                 <td mat-cell *matCellDef="let element"> {{element.periodo}} </td>
             </ng-container>
-            <!-- Symbol Column -->
+
             <ng-container matColumnDef="company">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Empresa </th>
                 <td mat-cell *matCellDef="let element"> {{element.company}} </td>
@@ -67,7 +73,7 @@
             <ng-container matColumnDef="tipo">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipo </th>
                 <td mat-cell *matCellDef="let element">
-                   {{element.tipo}}
+                    {{element.tipo}}
                 </td>
             </ng-container>
 
@@ -86,11 +92,14 @@
                 </td>
             </ng-container>
 
+            <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+            </tr>
+
             <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky:true"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
-        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
-            aria-label="Select page of periodic elements">
-        </mat-paginator>
     </div>
+    <mat-paginator [pageSizeOptions]="[10, 15, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+    </mat-paginator>
 </div>

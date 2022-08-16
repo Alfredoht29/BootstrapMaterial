@@ -11,17 +11,21 @@ export class PendingComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'detalles'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  title="Precanceladas";
+  title = "Precanceladas";
   constructor() { }
 
   ngOnInit(): void {
   }
-  x(){
+  x() {
     console.log("x")
   }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+  }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }
 export interface PeriodicElement {

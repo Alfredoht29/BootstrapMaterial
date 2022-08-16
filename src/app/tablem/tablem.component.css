@@ -12,3 +12,17 @@ h2 {
   margin-top: 25px;
   margin-left: 25px;
 }
+.mat-form-field-wrapper {
+  padding-bottom: 20px;
+}
+.mat-form-field {
+  font-size: 18px;
+  width: 100%;
+}
+.bg-cice{
+  background-color: #E87722!important;
+}
+.mat-elevation-z8{
+  overflow-x: auto;
+}
+

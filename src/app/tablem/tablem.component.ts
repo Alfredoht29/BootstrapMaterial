@@ -43,6 +43,12 @@ export class TablemComponent implements AfterViewInit {
   detalle(x1: Number, x2: string, x3: string, x4: string) {
     this.route.navigate(['tablem', x4], { queryParams: { cantidad: x1, estado: x2, periodo: x3, company: x4 } })
   }
+  
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
 }
 
 

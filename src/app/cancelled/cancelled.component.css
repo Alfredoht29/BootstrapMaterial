@@ -6,3 +6,7 @@ th.mat-header-cell {
     text-align: center !important;
     background-color: rgb(232, 122, 19);
   }
+.mat-form-field {
+    font-size: 18px;
+    width: 100%;
+  }

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -8,14 +8,18 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['../pending/pending.component.css']
 })
 export class SustitutionComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'detalles'];
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'x', 'x2', 'x3', 'x4', 'x5', 'detalles'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @Input() periodo:string | undefined;
+  @Input() compañia:string | undefined;
   title="Sustitucion"
   constructor() { }
 
   ngOnInit(): void {
+   
   }
+  
   x(){
     console.log("x")
   }

@@ -3,10 +3,26 @@ h2{
     margin-left: 25px;
 }
 th.mat-header-cell {
-    text-align: center !important;
-    background-color: rgb(232, 122, 19);
-  }
+  text-align: center !important;
+  background-color: rgb(232, 122, 19);
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: ghostwhite;
+  font-size: 1rem;
+}
+.mat-toolbar-row{ 
+justify-content: space-between; 
+}
+mat-paginator {
+background-color: #212121;
+}
+.mat-form-field-wrapper {
+padding-bottom: 20px;
+}
 .mat-form-field {
-    font-size: 18px;
-    width: 100%;
-  }
+font-size: 18px;
+width: 100%;
+}
+.mat-elevation-z8{
+overflow-x: auto;
+}

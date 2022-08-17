@@ -45,7 +45,7 @@ export class NongenComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   arr:any;
   x:any;
-  @Input() nongenHerencia:string | undefined;
+  @Input() periodo:string | undefined;
   @Input() compañia:string | undefined;
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
@@ -83,7 +83,7 @@ export class NongenComponent implements OnInit {
   }
 
   cancelar(){
-    let p=this.nongenHerencia;
+    let p=this.periodo;
     let c=this.compañia;
     this.arr=(this.selection.selected);
     this.x=this.arr.map(function(item:{ position: any; name: any; weight: any; }){return{"position":item.position,"name":item.name,"weight":item.weight,"periodo":p,"compañia":c}})

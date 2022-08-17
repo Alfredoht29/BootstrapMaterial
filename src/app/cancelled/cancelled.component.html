@@ -1,5 +1,46 @@
 <h2>Canceladas</h2>
 <br>
+<div class="mb-3">
+    <div class="row">
+        <div class="col">
+            <label class="form-label">Nomina</label>
+            <select class="form-control" #nomin>
+                <option *ngFor="let item of nominas" [value]="item.nom">
+                    {{item.nom}}
+                </option>
+            </select>
+        </div>
+        <div class="col">
+            <label class="form-label">Fecha inicial</label>
+            <select class="form-control" #datei>
+                <option *ngFor="let date of dates" [value]="date.fecha">
+                    {{date.fecha}}
+                </option>
+            </select>
+        </div>
+        <div class="col">
+            <label class="form-label">Fecha Final</label>
+            <select class="form-control" #datef>
+                <option *ngFor="let date of dates" [value]="date.fecha">
+                    {{date.fecha}}
+                </option>
+            </select>
+        </div>
+        <div class="col">
+            <label class="form-label">Tipo de Nomina</label>
+            <select class="form-control" #tnomina>
+                <option *ngFor="let nom of tnominas" [value]="nom.tipo">
+                    {{nom.tipo}}
+                </option>
+            </select>
+        </div>
+        <div class="col">
+            <br>
+            <button (click)="SearchAbstract(nomin.value,datei.value,datef.value,tnomina.value)"
+                class="btn btn-primary" style="margin-top: 8px;">buscar</button>
+        </div>
+    </div>
+</div>
 <div class="container">
 <div class="bg-dark text-light">
     <mat-form-field appearance="fill">
@@ -9,38 +50,47 @@
 </div>
 </div>
 <div class="container">
-    <div class="mat-elevation-z8">
-        <table mat-table [dataSource]="dataSource" style="width: 100%;text-align: center ;">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;text-align: center ;">
        
             <ng-container matColumnDef="position">
-                <th mat-header-cell *matHeaderCellDef> No. </th>
+                <th mat-header-cell *matHeaderCellDef> Matricula </th>
                 <td mat-cell *matCellDef="let element"> {{element.position}} </td>
             </ng-container>
-          
+    
             <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <th mat-header-cell *matHeaderCellDef> Empleado </th>
                 <td mat-cell *matCellDef="let element"> {{element.name}} </td>
             </ng-container>
-          
+    
             <ng-container matColumnDef="weight">
-                <th mat-header-cell *matHeaderCellDef> Weight </th>
+                <th mat-header-cell *matHeaderCellDef> Fecha </th>
                 <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
             </ng-container>
-          
+    
             <ng-container matColumnDef="symbol">
-                <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                <th mat-header-cell *matHeaderCellDef> CPBID </th>
                 <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
             </ng-container>
+    
+            <ng-container matColumnDef="x">
+                <th mat-header-cell *matHeaderCellDef> Total </th>
+                <td mat-cell *matCellDef="let element"> x </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="x2">
+                <th mat-header-cell *matHeaderCellDef> UUID </th>
+                <td mat-cell *matCellDef="let element"> x </td>
+            </ng-container>
+    
 
             <tr class="mat-row" *matNoDataRow>
-                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                <td class="mat-cell" colspan="6">No data matching the filter "{{input.value}}"</td>
             </tr>
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky:true"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
-        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+        <mat-paginator [pageSizeOptions]="[10, 15, 20]" showFirstLastButtons
             aria-label="Select page of periodic elements">
         </mat-paginator>
-    </div>
 </div>

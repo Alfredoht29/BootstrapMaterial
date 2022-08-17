@@ -4,20 +4,20 @@
     <div *ngIf="estado=='Generado'">
         <mat-tab-group style="height: 100vh">
             <mat-tab label="Generadas">
-                <app-gen></app-gen>
+                <app-gen [periodo]="periodo"[compañia]="title"></app-gen>
             </mat-tab>
             <mat-tab label="En Sustitucion">
-                <app-sustitution></app-sustitution>
+                <app-sustitution [periodo]="periodo"[compañia]="title"></app-sustitution>
             </mat-tab>
         </mat-tab-group>
     </div>
     <div *ngIf="estado=='No Generado'">
         <mat-tab-group style="height: 100vh">
             <mat-tab label="No generadas">
-                <app-nongen [nongenHerencia]="periodo"[compañia]="title"></app-nongen>
+                <app-nongen [periodo]="periodo"[compañia]="title"></app-nongen>
             </mat-tab>
             <mat-tab label="Precanceladas">
-                <app-pending></app-pending>
+                <app-pending [periodo]="periodo"[compañia]="title"></app-pending>
             </mat-tab>
         </mat-tab-group>
     </div>

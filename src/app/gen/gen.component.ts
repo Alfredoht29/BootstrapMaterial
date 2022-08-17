@@ -11,9 +11,12 @@ export class GenComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'x', 'x2', 'x3', 'x4', 'x5', 'detalles'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @Input() periodo:string | undefined;
+  @Input() compañia:string | undefined;
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
   ngAfterViewInit() {

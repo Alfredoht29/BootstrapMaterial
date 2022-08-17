@@ -8,14 +8,24 @@ import { PendingComponent } from '../pending/pending.component';
   styleUrls: ['./cancelled.component.css']
 })
 export class CancelledComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','x','x2'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  dates = [{ fecha: '2071-01-12 12:09:27' },
+  { fecha: '2009-06-05 17:22:18' },
+  { fecha: '1937-12-09 05:26:45' },
+  { fecha: '2043-01-02 01:32:03' },
+  { fecha: '1958-09-18 05:31:50' }]
+
+  tnominas = [{ tipo: "Nomina Ordinaria" }, { tipo: "Nomina Fin" }, { tipo: "Nomina PTU" }]
+  nominas = [{ nom: "APOYO TRANSPORTE ASCOP" }, { nom: "APOYO TRANSPORTE FISA" }, { nom: "LISTADO QUINCENAL BECA DE PRACTICANTES" }]
   constructor() { }
 
-  x(){
-    console.log("x")
+  SearchAbstract(n: string, di: string, df: string, tn: string) {
+    let resumen = [{ "nomina": n, "diai": di, "diaf": df, "tiponomina": tn }];
+    console.log(resumen);
   }
+
 
   ngOnInit(): void {
   }

@@ -54,8 +54,8 @@
         <ng-container matColumnDef="detalles">
             <th mat-header-cell *matHeaderCellDef> Acciones </th>
             <td mat-cell *matCellDef="let element">
-                <button class="btn btn-link btn-sm">Cancelar</button>|
-                <button class="btn btn-link btn-sm">Sustituir</button>
+                <button class="btn btn-link btn-sm" (click)="cancelar()">Cancelar</button>|
+                <button class="btn btn-link btn-sm" (click)="detalles()">detalles</button>
             </td>
         </ng-container>
 

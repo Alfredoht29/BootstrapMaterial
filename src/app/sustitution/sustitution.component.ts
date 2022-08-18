@@ -4,24 +4,27 @@ import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-sustitution',
-  templateUrl:'sustitution.component.html',
+  templateUrl: 'sustitution.component.html',
   styleUrls: ['../pending/pending.component.css']
 })
 export class SustitutionComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'x', 'x2', 'x3', 'x4', 'x5', 'detalles'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @Input() periodo:string | undefined;
-  @Input() compañia:string | undefined;
-  title="Sustitucion"
+  @Input() periodo: string | undefined;
+  @Input() compañia: string | undefined;
+  title = "Sustitucion"
   constructor() { }
 
   ngOnInit(): void {
-   
+
   }
-  
-  x(){
+
+  detalles() {
     console.log("x")
+  }
+  Eliminar() {
+    console.log("x2")
   }
 
   ngAfterViewInit() {

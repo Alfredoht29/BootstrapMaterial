@@ -9,9 +9,9 @@ import { TablemComponent } from './tablem/tablem.component';
 
 const routes: Routes = [{ path: 'tablem', component: TablemComponent },
 { path: '', redirectTo: 'tablem', pathMatch: 'full' },
-{ path: ':empresa', component: SecondtableComponent },
-{ path: 'tablem/:empresa/details', component: DetailsComponent },
 { path: 'cancelled', component: CancelledComponent },
+{ path: ':empresa', component: SecondtableComponent },
+{ path: ':empresa/details', component: DetailsComponent },
 { path: 'pending', component: PendingComponent },
 { path: 'sustitution', component: SustitutionComponent }];
 

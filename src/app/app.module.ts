@@ -24,6 +24,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { ErrorComponent } from './error/error.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule } from '@angular/material/input';
+import {MatDialog, MatDialogModule}from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import {MatInputModule } from '@angular/material/input';
     SustitutionComponent,
     CancelledComponent,
     ErrorComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import {MatInputModule } from '@angular/material/input';
     BrowserModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -18,7 +18,7 @@ export class PendingComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  x() {
+  detalles() {
     console.log("x")
   }
 

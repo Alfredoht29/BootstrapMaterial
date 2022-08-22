@@ -19,10 +19,11 @@ export class SecondtableComponent implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe((params:Params)=>{
       this.tabledet=params;
-      this.title=params['company'];
+      //this.title=params['company'];
       this.estado=params['estado'];
       this.periodo=params['periodo'];
     })
+    this.title=this.route.snapshot.params['empresa'];
   }
 
 }
